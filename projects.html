@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Alexander Dentler</title>
+    <meta
+      name="description"
+      content="Applied data-science and public-facing projects by Alexander Dentler, including Monitoring Mexico, Soccer Contributions, and @LiquidMexico."
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="chrome">
+        <div class="site-header-inner">
+          <a class="site-name" href="index.html">Alexander Dentler</a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="cv.html">CV</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="content page">
+      <section class="hero">
+        <p class="eyebrow">Projects</p>
+        <h1>Applied Work</h1>
+        <p class="intro">
+          These projects sit closer to implementation than to journal publication. They
+          are where economic questions, data engineering, automation, and public-facing
+          communication meet.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="stack">
+          <article class="entry">
+            <div class="project-header">
+              <img class="project-logo" src="assets/ProjectAssets/MonitoringMexico.png" alt="Monitoring Mexico logo">
+              <h2>Monitoring Mexico</h2>
+            </div>
+            <p>
+              Monitoring Mexico is an automated system for following Banco de Mexico,
+              inflation, labor market releases, forecasts, and financial conditions. It
+              began as a small effort to publish daily data updates and has evolved into a
+              broader pipeline that analyzes, distills, visualizes, contextualizes, and
+              narrates economic information with limited manual intervention.
+            </p>
+            <p>
+              The project is also a concrete experiment in what useful economic automation
+              can look like: not just data dumps, but structured stories backed by data,
+              models, and repeatable workflows. It reflects a broader interest in how
+              economists can use computation and language models to make specialized topics
+              more legible to wider audiences.
+            </p>
+            <div class="link-row">
+              <a href="https://monitoring-monetary-policy-in-mexico.webflow.io/" target="_blank" rel="noopener noreferrer">Open Monitoring Mexico</a>
+            </div>
+
+            <div class="subproject">
+              <h3>@LiquidMexico</h3>
+              <p>
+                Public-facing data visualization about the Mexican economy, finance,
+                banking, and payments system. Some posts are stand-alone explainers;
+                others grow out of classroom assignments and show how raw data can become
+                an argument, a chart, or a compact narrative. Also serves as a teaching
+                archive.
+              </p>
+              <div class="carousel" aria-label="LiquidMexico data visualizations">
+                <div class="carousel-track">
+                  <img src="assets/LiquidMexico/LM_BondsWithOpinions.png" alt="When Do Bonds Get Opinions About Monetary Policy?" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_InflationVsTenure.png" alt="Central bank performance, job security, and the Mexican case" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_ImpliedInflationExpectations.png" alt="CPI Inflation expectations: Mexico and the US" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_EducationInflation.png" alt="Education inflation in Mexico" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_WeatheringAPandemic.png" alt="Weathering a pandemic" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_Inflation2022June.png" alt="Inflation June 2022" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_Inflation2021Nov.png" alt="Inflation November 2021" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_ATMDistribution.png" alt="ATM distribution in Mexico" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_CardPaymentsAsFraction.png" alt="Card payments as a fraction of transactions" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_CardsPerDeposit.png" alt="Cards per deposit" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_Deposits.png" alt="Deposits in Mexico" loading="lazy">
+                  <img src="assets/LiquidMexico/LM_POSvsATMS.png" alt="POS vs ATMs" loading="lazy">
+                </div>
+              </div>
+              <div class="link-row">
+                <a href="https://x.com/liquidmexico" target="_blank" rel="noopener noreferrer">Open @LiquidMexico</a>
+              </div>
+            </div>
+
+            <div class="subproject">
+              <h3>Monitoring Minutes</h3>
+              <p>
+                An AI-generated, data- and event-triggered podcast on Mexican monetary
+                policy and macroeconomics. Brief episodes with economic news summaries,
+                indicator analysis, and central bank decision schedules. Fully automated:
+                data sourced from Banxico, INEGI, FRED, and news outlets; scripts
+                generated via LLM dialogue; audio via text-to-speech; distributed
+                through RSS.
+              </p>
+              <div class="link-row">
+                <a href="https://open.spotify.com/show/3ojmjRyzNqdOmxxxb4RUL4" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a href="https://podcasts.apple.com/de/podcast/monitoring-minutes/id1878643907" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+                <a href="https://github.com/adentler1/MonitoringPodcast" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="project-header">
+              <img class="project-logo" src="assets/ProjectAssets/SoccerContributionsLogo.png" alt="Soccer Contributions logo">
+              <h2>Soccer Contributions</h2>
+            </div>
+            <p>
+              Soccer Contributions applies data science to player evaluation and scouting.
+              The project focuses on value creation that sits outside the usual highlight
+              statistics, with an emphasis on contribution rather than simple counting
+              metrics such as goals and assists.
+            </p>
+            <p>
+              The underlying motivation is similar to my academic work: useful measurement
+              requires a model of the mechanism that generates the outcome. In this case,
+              that means identifying which on-ball and off-ball actions help teams create
+              and prevent value over the course of a match.
+            </p>
+            <div class="link-row">
+              <a href="https://soccercontributions.com/" target="_blank" rel="noopener noreferrer">Open Soccer Contributions</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content">
+        <p>Alexander Dentler | Applied Economic Theorist | Frankfurt area, Germany</p>
+      </div>
+    </footer>
+  </body>
+</html>
