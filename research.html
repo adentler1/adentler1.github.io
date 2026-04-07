@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research | Alexander Dentler</title>
+    <meta
+      name="description"
+      content="Research by Alexander Dentler on financial intermediation, political economy, living standards, and monetary economics."
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="chrome">
+        <div class="site-header-inner">
+          <a class="site-name" href="index.html">Alexander Dentler</a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="research.html" aria-current="page">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="cv.html">CV</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="content page">
+      <section class="hero">
+        <p class="eyebrow">Research</p>
+        <h1>Publications and Working Papers</h1>
+        <p class="intro">
+          My research connects monetary economics, financial intermediation, political
+          economy, and the measurement of welfare. The common thread is institutional:
+          how rules, information, and market structure shape observed outcomes.
+        </p>
+      </section>
+
+      <div class="controls">
+        <div class="control-group">
+          <span class="control-label">Sort</span>
+          <button class="control-btn active" data-sort="chrono">Chronological</button>
+          <button class="control-btn" data-sort="topic">By topic</button>
+        </div>
+        <div class="control-group">
+          <span class="control-label">Show</span>
+          <button class="control-btn active" data-display="abstract">Abstract</button>
+          <button class="control-btn" data-display="bullets">Key points</button>
+          <button class="control-btn" data-display="none">Titles only</button>
+        </div>
+      </div>
+
+      <div id="research-output"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content">
+        <p>Alexander Dentler | Applied Economic Theorist | Frankfurt area, Germany</p>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      var papers = [
+        {
+          id: "do-private-banks",
+          title: "Do Private Banks Attempt to Influence Presidential Elections?",
+          authors: "Alexander Dentler and Enzo Rossi",
+          venue: "Accepted, Southern Economic Journal",
+          year: 2025,
+          status: "accepted",
+          topics: ["political-economy"],
+          abstract: "We provide evidence of a political lending cycle in U.S. presidential elections characterized by an increase in credit supply by large banks in swing states. The credit expansion is independent of the incumbent\u2019s party, revealing a non-partisan preference for political continuity. Growth in mortgage and small business loans is substantial, but does not affect credit quality.",
+          bullets: [
+            "Studies whether private banks adjust lending around presidential elections",
+            "Credit supply as an active channel of political influence",
+            "Intersection of political economy and banking"
+          ],
+          links: [],
+          wp: null
+        },
+        {
+          id: "crime-paper",
+          title: "Measuring Residents\u2019 Willingness to Pay to Avoid Crime",
+          authors: "Alexander Dentler and Enzo Rossi",
+          venue: "Journal of Housing Economics 66: 102024",
+          year: 2024,
+          status: "published",
+          topics: ["living-standards"],
+          abstract: "House price changes following a crime do not fully reflect the willingness to pay to avoid crime. We combine real estate data with various types of crime data using time and geospatial information to detect discontinuities in transaction densities and pricing around crime events. Shootings, assaults, robberies, and burglaries produce measurable freezes in housing transactions. A search-and-match framework combines price and quantity responses into a welfare measure, implying willingness to pay between 7% and 18% of property values\u2014substantially exceeding the 0%\u201310% price effects documented in prior literature.",
+          bullets: [
+            "Crime leads to market freezes in the private real estate sector",
+            "Residents\u2019 willingness to pay: 7\u201318% of house value",
+            "Price analyses underestimate welfare losses"
+          ],
+          links: [
+            { label: "Journal article", url: "https://doi.org/10.1016/j.jhe.2024.102024" },
+            { label: "Working paper version", url: "https://www.snb.ch/en/publications/research/working-papers/2021/working_paper_2021_20" }
+          ],
+          wp: {
+            title: "Shooting Up Liquidity: The Effect of Crime on Real Estate",
+            ref: "SNB Working Paper 2021-20",
+            delta: "The published version reduces the sample threshold from $100,000 to $50,000\u2014a substantial change informed by the realization that U.S. housing values are far lower than European reference points. The working paper also centers on the regression-discontinuity design complication; the published version develops the welfare framework more fully.",
+            bullets: [
+              "Linking real estate and crime data (time/location)",
+              "Liquidity collapses and price declines",
+              "Welfare losses particularly for uninformed buyers"
+            ]
+          }
+        },
+        {
+          id: "debt-paper",
+          title: "Public Debt Management Announcements: A Welfare-Theoretic Analysis",
+          authors: "Alexander Dentler and Enzo Rossi",
+          venue: "Economic Modelling 131: 106561",
+          year: 2024,
+          status: "published",
+          topics: ["information-economics"],
+          abstract: "Before an auction, public debt managers (DMs) announce the number of bonds to be sold to primary dealers (PDs); however, the empirical evidence suggests that when \u2018beat-the-market\u2019 opportunities arise, more bonds than announced are auctioned. A micro foundation for this result resides in PDs\u2019 sale of bonds to uninformed traders, thereby extracting information rents. These rents give rise to two counteracting effects. On the one hand, they create an auction premium that motivates DMs to overissue. On the other hand, they motivate traders to learn the bond value, which increases market expertise, mitigating the auction premium and issuance bias. A credible announcement policy raises welfare by increasing the auction premium, depressing the issuance bias, and reducing traders\u2019 need to invest in market expertise.",
+          bullets: [
+            "Credible announcements reduce issuance bias and increase welfare",
+            "Information rents foster expertise and generate auction premiums",
+            "Credible policy reduces issuance bias and increases welfare"
+          ],
+          links: [
+            { label: "Journal article", url: "https://doi.org/10.1016/j.econmod.2023.106561" },
+            { label: "Working paper version", url: "https://www.snb.ch/en/publications/research/working-papers/2022/working_paper_2022_06" }
+          ],
+          wp: {
+            title: "Public Debt Management Announcements under Beat-the-Market Opportunities",
+            ref: "SNB Working Paper 2022-06",
+            delta: "The working paper focuses on the tradeoff between announced and actual issuance under \u2018beat-the-market\u2019 opportunities. The published version shifts the emphasis toward welfare implications, developing the normative analysis of credible announcement policy more fully.",
+            bullets: [
+              "Adverse selection under high information asymmetry",
+              "Information rents: auction premiums and issuance bias"
+            ]
+          }
+        },
+        {
+          id: "living-standards-paper",
+          title: "Price Sensitivity as a Measure of Living Standards in Late-Colonial Mexico City",
+          authors: "Luz Marina Arias and Alexander Dentler",
+          venue: "Investigaciones de Historia Econ\u00f3mica \u2013 Economic History Research 19(2): 49\u201369",
+          year: 2023,
+          status: "published",
+          topics: ["living-standards"],
+          abstract: "The paper uses maize and wheat prices together with seasonal climatic conditions measured through tree-ring growth to recover households\u2019 substitution behavior in late-colonial Mexico City. The elasticity of substitution provides a demand-side measure of living standards, positioning average household spending between two theoretical baskets. A fixed basket would require approximately 29% more spending than the cheapest alternative, while the estimates suggest only about 2% additional spending. The analysis confirms declining living standards and emphasizes how economic pressure and necessity give rise to adaptation.",
+          bullets: [
+            "Adjustments in household consumption are significant for measuring living standards",
+            "Tree-ring and grain prices capture climatic influences",
+            "Substitution elasticity measured near the \u2018cheap\u2019 consumption basket"
+          ],
+          links: [
+            { label: "Journal article", url: "https://doi.org/10.33231/j.ihe.2023.05.006" },
+            { label: "Open access version", url: "https://recyt.fecyt.es/index.php/IHE/article/view/100413" }
+          ],
+          wp: null
+        },
+        {
+          id: "fed-paper",
+          title: "Did the Fed Raise Interest Rates Before Elections?",
+          authors: "Alexander Dentler",
+          venue: "Public Choice 181(3): 239\u2013273",
+          year: 2019,
+          status: "published",
+          topics: ["political-economy"],
+          abstract: "The literature on political business cycles focuses on elected incumbents and neglects the incentives of appointed officials. We present evidence of rate hikes before elections when the chair of the US Federal Reserve is from a different party than the incumbent president. This finding contrasts with the traditional belief that an inappropriate policy-rate bias implies a more expansive pre-election policy stance. We also find weak evidence that rates are lowered when the chair and president are from the same party. The evidence that ideological preferences of the chair matter remains even when we control for career motives.",
+          bullets: [
+            "Partisan incentives of Fed chairs in focus",
+            "Before elections, interest rates rise when the president and Fed chair belong to different parties"
+          ],
+          links: [
+            { label: "Journal article", url: "https://doi.org/10.1007/s11127-019-00653-z" },
+            { label: "Abstract and citation", url: "https://econpapers.repec.org/article/kappubcho/v_3a181_3ay_3a2019_3ai_3a3_3ad_3a10.1007_5fs11127-019-00653-z.htm" }
+          ],
+          wp: null
+        },
+        {
+          id: "threshold-paper",
+          title: "Endogeneity in Threshold Nonlinearity Tests",
+          authors: "Alexander Dentler, Gabriel Montes-Rojas, and Jose Olmo",
+          venue: "Communications in Statistics \u2013 Theory and Methods 43: 105\u2013114",
+          year: 2014,
+          status: "published",
+          topics: ["econometrics"],
+          abstract: "This paper shows the conditions under which endogeneity of a regressor variable does not affect threshold nonlinearity tests. Inference on the values of the parameters derived from standard statistics is also appropriate. Simulation techniques are used to approximate the p-value of the test. Monte Carlo simulations confirm the validity of Wald tests in the presence of endogeneity in the regressors.",
+          bullets: [
+            "Wald tests remain valid despite endogenous regressors",
+            "Endogeneity does not bias threshold tests under certain conditions",
+            "Simulations confirm the validity of Wald tests",
+            "MATLAB implementation for empirical applications"
+          ],
+          links: [
+            { label: "Paper PDF", url: "https://eprints.soton.ac.uk/348642/1/draftIVv6_revised.pdf" },
+            { label: "MATLAB implementation", url: "https://www.mathworks.com/matlabcentral/fileexchange/54284-nonlinear-threshold-tests" }
+          ],
+          wp: null
+        },
+        {
+          id: "suerf-paper",
+          title: "To Announce or Not To Announce: Basic Trade-offs in Public Debt Management",
+          authors: "Alexander Dentler and Enzo Rossi",
+          venue: "SUERF Policy Brief, No. 402",
+          year: 2022,
+          status: "policy",
+          topics: ["information-economics"],
+          abstract: "We provide an information-based explanation for \u2018beat-the-market\u2019 opportunities arising to public debt managers (DMs) in the auctions of sovereign bonds. Briefly, primary dealers (PDs) have privileged access to the primary market and an institution-based information advantage compared to traders in the secondary market. At times PDs can extract information rents from traders that give rise to two counteracting effects. On the one hand information rents create an auction premium that incentivizes DMs to overissue, on the other hand they motivate traders to acquire expertise, which mitigates the auction premium and the issuance bias. Announcing a target for the bond volume before an auction provides a commitment device that limits the extraction of information rents but reduces traders\u2019 expertise and limits the DMs\u2019 flexibility to accommodate unforeseen changes in financial needs.",
+          bullets: [
+            "Implicit market with announcements and expertise as quantity and price",
+            "Commitment through target volume reduces rents, lowers flexibility"
+          ],
+          links: [],
+          wp: null
+        },
+        {
+          id: "governor-paper",
+          title: "Does a Dismissal of a Central Bank Governor Abroad Affect Monetary Policy at Home?",
+          authors: "Alexander Dentler and Enzo Rossi",
+          venue: "Submitted",
+          year: 2025,
+          status: "submitted",
+          topics: ["political-economy"],
+          abstract: "",
+          bullets: [
+            "Cross-country spillovers from central bank governor dismissals",
+            "Institutional credibility as a transmission channel",
+            "External events reshape domestic monetary policy incentives"
+          ],
+          links: [],
+          wp: null
+        },
+        {
+          id: "otc-paper",
+          title: "Intermediated Attainment in Over-the-Counter Markets",
+          authors: "Alexander Dentler and Victor Chavez",
+          venue: "Working paper",
+          year: 2025,
+          status: "wip",
+          topics: ["information-economics"],
+          abstract: "",
+          bullets: [
+            "Theoretical model of OTC market intermediation",
+            "How trading relationship structures affect allocations",
+            "Implications for market efficiency and welfare"
+          ],
+          links: [],
+          wp: null
+        },
+        {
+          id: "local-credit-paper",
+          title: "Is Residential Real Estate Lending Still Local?",
+          authors: "Alexander Dentler, Yu-Hsiang Lei, and Enzo Rossi",
+          venue: "In preparation",
+          year: 2025,
+          status: "wip",
+          topics: ["information-economics"],
+          abstract: "",
+          bullets: [
+            "Impact of local bank-branch closures on credit access and house prices",
+            "Spatial frictions in lending and regional inequality",
+            "Links financial inclusion to housing market stability"
+          ],
+          links: [],
+          wp: null
+        }
+      ];
+
+      var topicMeta = {
+        "political-economy": { label: "Political Economy", order: 1 },
+        "living-standards": { label: "Living Standards", order: 2 },
+        "information-economics": { label: "Information Economics", order: 3 },
+        "econometrics": { label: "Econometrics", order: 4 }
+      };
+
+      var statusLabels = {
+        accepted: "Accepted and Forthcoming",
+        published: "Peer-Reviewed Publications",
+        policy: "Policy Briefs",
+        submitted: "Under Review",
+        wip: "Work in Progress"
+      };
+
+      var statusTags = {
+        published: "Peer-Reviewed",
+        policy: "Policy Brief",
+        submitted: "Under Review",
+        wip: "Work in Progress"
+      };
+
+      var statusOrder = ["accepted", "published", "policy", "submitted", "wip"];
+
+      var currentSort = "chrono";
+      var currentDisplay = "abstract";
+
+      function el(tag, attrs, children) {
+        var e = document.createElement(tag);
+        if (attrs) Object.keys(attrs).forEach(function (k) {
+          if (k === "className") e.className = attrs[k];
+          else if (k === "html") e.innerHTML = attrs[k];
+          else e.setAttribute(k, attrs[k]);
+        });
+        if (children) children.forEach(function (c) {
+          if (typeof c === "string") e.appendChild(document.createTextNode(c));
+          else if (c) e.appendChild(c);
+        });
+        return e;
+      }
+
+      function renderPaper(paper) {
+        var nodes = [];
+
+        var h3 = el("h3", { className: "entry-title" });
+        h3.id = paper.id;
+        h3.textContent = paper.title;
+        if (paper.status === "accepted") {
+          h3.appendChild(el("span", { className: "tag" }, ["New"]));
+        }
+        if (statusTags[paper.status]) {
+          h3.appendChild(el("span", { className: "tag tag--" + paper.status }, [statusTags[paper.status]]));
+        }
+        nodes.push(h3);
+
+        nodes.push(el("p", { className: "meta" }, [paper.authors + ". " + paper.venue + "."]));
+
+        if (currentDisplay === "abstract" && paper.abstract) {
+          nodes.push(el("p", {}, [paper.abstract]));
+        } else if (currentDisplay === "bullets" && paper.bullets) {
+          var ul = el("ul", { className: "bullet-list" });
+          paper.bullets.forEach(function (b) { ul.appendChild(el("li", {}, [b])); });
+          nodes.push(ul);
+        }
+
+        if (paper.wp && (currentDisplay === "abstract" || currentDisplay === "bullets")) {
+          var wpDiv = el("div", { className: "wp-note" });
+          wpDiv.appendChild(el("p", { className: "wp-label" }, [
+            "Earlier version: \u201c" + paper.wp.title + "\u201d (" + paper.wp.ref + ")"
+          ]));
+          if (currentDisplay === "bullets" && paper.wp.bullets) {
+            var wpUl = el("ul", { className: "bullet-list" });
+            paper.wp.bullets.forEach(function (b) { wpUl.appendChild(el("li", {}, [b])); });
+            wpDiv.appendChild(wpUl);
+          }
+          wpDiv.appendChild(el("p", { className: "wp-delta" }, [paper.wp.delta]));
+          nodes.push(wpDiv);
+        }
+
+        if (paper.links.length > 0) {
+          var row = el("div", { className: "link-row" });
+          paper.links.forEach(function (l) {
+            row.appendChild(el("a", { href: l.url, target: "_blank", rel: "noopener noreferrer" }, [l.label]));
+          });
+          nodes.push(row);
+        }
+
+        var article = el("article", { className: "entry" });
+        nodes.forEach(function (n) { article.appendChild(n); });
+        return article;
+      }
+
+      function renderChrono() {
+        var container = document.createDocumentFragment();
+        statusOrder.forEach(function (status) {
+          var group = papers.filter(function (p) { return p.status === status; });
+          if (group.length === 0) return;
+          group.sort(function (a, b) { return b.year - a.year; });
+
+          var section = el("section", { className: "section" });
+          section.appendChild(el("h2", {}, [statusLabels[status]]));
+          var stack = el("div", { className: "stack" });
+          group.forEach(function (p) { stack.appendChild(renderPaper(p)); });
+          section.appendChild(stack);
+          container.appendChild(section);
+        });
+        return container;
+      }
+
+      function renderByTopic() {
+        var container = document.createDocumentFragment();
+        var topicKeys = Object.keys(topicMeta).sort(function (a, b) {
+          return topicMeta[a].order - topicMeta[b].order;
+        });
+        topicKeys.forEach(function (topic) {
+          var group = papers.filter(function (p) {
+            return p.topics.indexOf(topic) !== -1;
+          });
+          if (group.length === 0) return;
+          group.sort(function (a, b) { return b.year - a.year; });
+
+          var section = el("section", { className: "section" });
+          section.appendChild(el("h2", {}, [topicMeta[topic].label]));
+          var stack = el("div", { className: "stack" });
+          group.forEach(function (p) { stack.appendChild(renderPaper(p)); });
+          section.appendChild(stack);
+          container.appendChild(section);
+        });
+        return container;
+      }
+
+      function render() {
+        var out = document.getElementById("research-output");
+        out.innerHTML = "";
+        out.appendChild(currentSort === "chrono" ? renderChrono() : renderByTopic());
+      }
+
+      document.querySelectorAll("[data-sort]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll("[data-sort]").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          currentSort = btn.getAttribute("data-sort");
+          render();
+        });
+      });
+
+      document.querySelectorAll("[data-display]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll("[data-display]").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          currentDisplay = btn.getAttribute("data-display");
+          render();
+        });
+      });
+
+      render();
+    })();
+    </script>
+  </body>
+</html>
