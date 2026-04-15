@@ -405,6 +405,20 @@ small,
   margin-top: 1.25rem;
 }
 
+/* Featured card */
+
+.featured {
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fafaf7;
+}
+
+.featured .entry-title {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
 /* Project logos */
 
 .project-header {
