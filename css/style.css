@@ -309,6 +309,10 @@ small,
   gap: var(--item-gap);
 }
 
+.stack:has(.cv-item) {
+  gap: 0;
+}
+
 .entry {
   padding-top: 2.5rem;
   position: relative;
@@ -495,16 +499,32 @@ small,
 }
 
 .cv-item {
-  padding-top: 1rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
 .cv-item:first-child {
   padding-top: 0;
 }
 
+.cv-item:last-child {
+  padding-bottom: 0;
+}
+
 .cv-item + .cv-item {
-  padding-top: 1rem;
   border-top: 1px dashed var(--border);
+}
+
+.cv-item > :last-child {
+  margin-bottom: 0;
+}
+
+.cv-item p {
+  margin-bottom: 0.35rem;
+}
+
+.cv-item h3 {
+  margin-bottom: 0.25rem;
 }
 
 .cv-dates {
