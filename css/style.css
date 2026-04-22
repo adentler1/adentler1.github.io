@@ -200,6 +200,23 @@ small,
   padding-top: 0.25rem;
 }
 
+.hero-block {
+  margin-top: 1.75rem;
+}
+
+.hero-block h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.hero-block p {
+  margin-bottom: 0;
+}
+
 .hero-inner {
   display: flex;
   gap: 2rem;
