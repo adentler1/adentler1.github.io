@@ -10,7 +10,7 @@
   --carousel-bg: #fafafa;
   --max-width: 720px;
   --nav-width: 1040px;
-  --section-gap: 4rem;
+  --section-gap: 5rem;
   --item-gap: 1.5rem;
 }
 
@@ -112,10 +112,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--text);
+  letter-spacing: -0.005em;
 }
 
 h3 {
@@ -286,7 +289,15 @@ small,
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .section-link {
@@ -299,13 +310,27 @@ small,
 }
 
 .entry {
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+  position: relative;
+}
+
+.entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--text);
+  opacity: 0.8;
 }
 
 .entry:first-child {
   padding-top: 0;
-  border-top: 0;
+}
+
+.entry:first-child::before {
+  display: none;
 }
 
 .entry-title {
@@ -509,9 +534,13 @@ small,
 /* Project separation — stronger break between top-level projects on projects page */
 
 .entry.project-entry {
-  padding-top: 3rem;
-  margin-top: 3rem;
+  padding-top: 3.5rem;
+  margin-top: 3.5rem;
   border-top: 2px solid var(--border);
+}
+
+.entry.project-entry::before {
+  display: none;
 }
 
 .entry.project-entry:first-child {
