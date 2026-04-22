@@ -310,7 +310,7 @@ small,
 }
 
 .stack:has(.cv-item) {
-  gap: 0;
+  gap: 0.75rem;
 }
 
 .entry {
@@ -402,13 +402,27 @@ small,
 }
 
 .card {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--text);
+  opacity: 0.8;
 }
 
 .card:first-child {
   padding-top: 0;
-  border-top: 0;
+}
+
+.card:first-child::before {
+  display: none;
 }
 
 .link-row {
@@ -499,20 +513,28 @@ small,
 }
 
 .cv-item {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.cv-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--text);
+  opacity: 0.8;
 }
 
 .cv-item:first-child {
   padding-top: 0;
 }
 
-.cv-item:last-child {
-  padding-bottom: 0;
-}
-
-.cv-item + .cv-item {
-  border-top: 1px dashed var(--border);
+.cv-item:first-child::before {
+  display: none;
 }
 
 .cv-item > :last-child {
