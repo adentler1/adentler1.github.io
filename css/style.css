@@ -5,10 +5,56 @@
   --accent-hover: #1d4ed8;
   --muted: #6b7280;
   --border: #e5e7eb;
+  --featured-bg: #fafaf7;
+  --wp-bg: #f9fafb;
+  --carousel-bg: #fafafa;
   --max-width: 720px;
   --nav-width: 1040px;
   --section-gap: 4rem;
   --item-gap: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1115;
+    --text: #e8eaed;
+    --accent: #7aa2ff;
+    --accent-hover: #a4bcff;
+    --muted: #9aa0a6;
+    --border: #2a2e36;
+    --featured-bg: #171923;
+    --wp-bg: #161a22;
+    --carousel-bg: #12141a;
+  }
+
+  .tag--published {
+    color: #c9b99a;
+    background: #2a2619;
+    border-color: #3b3424;
+  }
+
+  .tag--policy {
+    color: #a2c5ac;
+    background: #1a241c;
+    border-color: #2a3a2d;
+  }
+
+  .tag--submitted {
+    color: #a2b2c5;
+    background: #1a1e26;
+    border-color: #2a3040;
+  }
+
+  .tag--wip {
+    color: #c5a2b8;
+    background: #241a22;
+    border-color: #3a2a36;
+  }
+
+  .project-logo,
+  .carousel-track img {
+    filter: brightness(0.92);
+  }
 }
 
 * {
@@ -149,6 +195,44 @@ small,
 
 .hero {
   padding-top: 0.25rem;
+}
+
+.hero-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 560px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-photo {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .eyebrow {
@@ -386,13 +470,16 @@ small,
 }
 
 .cv-item {
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
+  padding-top: 1rem;
 }
 
 .cv-item:first-child {
   padding-top: 0;
-  border-top: 0;
+}
+
+.cv-item + .cv-item {
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
 }
 
 .cv-dates {
@@ -411,12 +498,26 @@ small,
   padding: 1.5rem 1.75rem;
   border: 1px solid var(--border);
   border-radius: 6px;
-  background: #fafaf7;
+  background: var(--featured-bg);
 }
 
 .featured .entry-title {
   margin-top: 0;
   font-size: 1.2rem;
+}
+
+/* Project separation — stronger break between top-level projects on projects page */
+
+.entry.project-entry {
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 2px solid var(--border);
+}
+
+.entry.project-entry:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
 }
 
 /* Project logos */
@@ -480,7 +581,7 @@ small,
   width: 100%;
   height: auto;
   object-fit: contain;
-  background: #fafafa;
+  background: var(--carousel-bg);
 }
 
 /* Research controls */
@@ -536,7 +637,7 @@ small,
 .wp-note {
   margin-top: 0.75rem;
   padding: 0.75rem 1rem;
-  background: #f9fafb;
+  background: var(--wp-bg);
   border-left: 3px solid var(--border);
   border-radius: 2px;
 }
